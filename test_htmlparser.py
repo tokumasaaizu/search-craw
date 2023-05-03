@@ -101,10 +101,10 @@ if __name__ == '__main__':
 		port='3307',
 		user='root',
 		password='hoge',
-		database='tbs',
+		database='hoge',
 		charset="utf8")
 	cur = con.cursor(buffered=True)
-	sql = ('''INSERT INTO `holdings` (url, title, description, keywords, body)VALUES (%s, %s, %s, %s, %s)''')
+	sql = ('''INSERT INTO `hoge` (url, title, description, keywords, body)VALUES (%s, %s, %s, %s, %s)''')
 	data = [(html_header['url'], html_header['title'],html_header['description'],html_header['keywords'],html_str_del)]
 	cur.executemany(sql, data)
 	crawled.append(tbshd)
